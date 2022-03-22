@@ -21,8 +21,10 @@
 <body>
   <div id="root"></div>
   <script type="module">
-    const rootElement = document.getElementById('root')
-    let element = document.createElement('div')
+    const rootElement = document.createElement('div')
+    document.body.append(rootElement)
+
+    const element = document.createElement('div')
 
     element.textContent = 'hello World'
     element.className = 'container'
