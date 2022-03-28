@@ -8,9 +8,16 @@
   <script type="module">
     const rootElement = document.getElementById('root')
 
+    // <div class="container">
+    //   <span>Hello</span>
+    //   <span>World</span>
+    // </div>
+
+    const helloElement = React.createElement('span', {}, 'Hello')
+    const worldElement = React.createElement('span', {}, 'world')
     const element = React.createElement('div', {
       className: 'container',
-      children: 'Hello World',
+      children: [helloElement, ' ', worldElement],
     })
     ReactDOM.render(element, rootElement)
     // 🐨 Please re-implement the regular document.createElement code above
